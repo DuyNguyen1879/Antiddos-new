@@ -29,7 +29,7 @@ sed -i '/IG_TCP_CPORTS/s/=".*"/="22,80,443"/' /etc/apf/conf.apf
 sed -i '/IG_ICMP_TYPES/s/=".*"/="3,5,11,30"/' /etc/apf/conf.apf
 sed -i '/EG_TCP_CPORTS/s/=".*"/="21,80,443"/' /etc/apf/conf.apf
 echo BLK_MCATNET="0" >> /etc/apf/conf.apf
-sudo apf -s
+sudo /usr/local/sbin/apf -s
 
 sudo wget https://codeload.github.com/shivaas/mod_evasive/zip/master
 sudo unzip master -d /opt
